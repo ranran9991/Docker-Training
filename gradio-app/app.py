@@ -9,4 +9,4 @@ interface = gr.Interface(
     inputs=gr.Textbox(label="Enter text"),
     outputs=gr.Textbox(label="Reversed text")
 )
-interface.launch(server_name="0.0.0.0", server_port=7860)
+interface.launch(server_name="0.0.0.0", server_port=8501)

@@ -47,7 +47,7 @@ First, watch this video: [Docker in 100 Seconds](https://www.youtube.com/watch?v
 
 1. **Dockerfile Basics**:
    - Key instructions: `FROM` (base image), `COPY` (add files), `RUN` (execute commands), `CMD` (default command), `EXPOSE` (ports).
-   - Example (in `code/simple-python` folder):
+   - Example (in `simple-python` folder):
      ```
      FROM python:3.10-slim
      WORKDIR /app
@@ -56,7 +56,7 @@ First, watch this video: [Docker in 100 Seconds](https://www.youtube.com/watch?v
      ```
 
 2. **Exercise 3**: Build a simple data app.
-   - Navigate to `code/simple-python` (contains `script.py` that loads a CSV with pandas and prints stats).
+   - Navigate to `simple-python` (contains `script.py` that loads a CSV with pandas and prints stats).
    - Build the image: `docker build -t my-data-app .`
    - Run it: `docker run my-data-app`
    - Expected output: CSV summary stats.
@@ -72,7 +72,7 @@ First, watch this video: [Docker in 100 Seconds](https://www.youtube.com/watch?v
    - Use Python web frameworks (Gradio) for ML demos.
 
 2. **Exercise 4**: Containerize a Gradio app.
-   - Navigate to `code/gradio-app` (contains `app.py` for a simple ML demo, e.g., text sentiment analysis).
+   - Navigate to `gradio-app` (contains `app.py` for a simple ML demo, e.g., text sentiment analysis).
    - Dockerfile provided:
      ```
      FROM python:3.10-slim
@@ -102,7 +102,7 @@ First, watch this video: [Docker in 100 Seconds](https://www.youtube.com/watch?v
    - Useful for saving datasets, model outputs, or logs in data science workflows.
 
 **Exercise 5**: Build and run a persistent data app.
-   - Navigate to `code/data-persistence` (contains `app.py` that reads/writes a CSV file).
+   - Navigate to `data-persistence` (contains `app.py` that reads/writes a CSV file).
    - Dockerfile provided:
      ```
      FROM python:3.10-slim
