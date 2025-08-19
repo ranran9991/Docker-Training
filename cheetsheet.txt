@@ -1,0 +1,29 @@
+# Docker Cheat Sheet
+
+# Basic Commands
+docker --version                # Check Docker version
+docker run hello-world         # Run a test container
+docker ps                      # List running containers
+docker ps -a                   # List all containers
+docker images                  # List images
+docker rm <container_id>       # Remove a container
+docker rmi <image_name>        # Remove an image
+
+# Pulling and Running Images
+docker pull python:3.10-slim   # Pull an image
+docker run -it python:3.10-slim python  # Run interactively
+docker run -d -p 5000:5000 --name registry registry:2  # Run local registry
+
+# Building and Tagging
+docker build -t my-app .       # Build image from Dockerfile
+docker tag my-app localhost:5000/my-app  # Tag for local registry
+docker push localhost:5000/my-app  # Push to local registry
+docker pull localhost:5000/my-app  # Pull from local registry
+
+# Running with Ports and Volumes
+docker run -p 8501:8501 my-app  # Map port for external access
+docker run -v $(pwd)/data:/app/data my-app  # Mount a volume
+
+# Debugging
+docker logs <container_id>      # View container logs
+docker exec -it <container_id> bash  # Access container shell
